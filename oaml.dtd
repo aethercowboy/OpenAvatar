@@ -1,0 +1,102 @@
+<!DOCUMENT oaml [
+<!ELEMENT body (head,skin,arms,legs)>
+<!ELEMENT head (hair, eyes, ears, mouth, nose)>
+<!ELEMENT skin (#PCDATA)>
+<!ELEMENT arms (arm+)>
+<!ELEMENT legs (leg+)>
+<!ELEMENT hair (#PCDATA)>
+<!ELEMENT eyes (eye+)>
+<!ELEMENT ears (ear+)>
+<!ELEMENT mouth (#PCDATA)>
+<!ELEMENT nose (#PCDATA)>
+<!ELEMENT arm (hand)>
+<!ELEMENT leg (foot)>
+<!ELEMENT eye (iris, pupil, sclera)>
+<!ELEMENT ear (#PCDATA)>
+<!ELEMENT hand (fingers)>
+<!ELEMENT foot (toes)>
+<!ELEMENT iris (#PCDATA)>
+<!ELEMENT pupil (#PCDATA)>
+<!ELEMENT sclera (#PCDATA)>
+<!ELEMENT fingers (finger+)>
+<!ELEMENT toes (toe+)>
+<!ELEMENT finger (#PCDATA)>
+<!ELEMENT toe (#PCDATA)>
+
+<!ATTLIST body gender (male|female|other|unknown) #REQUIRED>
+<!ATTLIST body build  (lean|fat|muscular) "lean">
+<!ATTLIST body shape (v|hourglass|apple|pear|straight) "straight">
+<!ATTLIST body height (short|average|tall) "average">
+<!ATTLIST body weight (light|average|heavy) "average">
+
+<!ATTLIST skin color CDATA #IMPLIED>
+<!ATTLIST skin tone (pale|light|average|tan|dark) "average">
+
+<!ATTLIST arms length (short|average|long) "average">
+<!ATTLIST arms count CDATA "2">
+
+<!ATTLIST legs length (short|average|long) "average">
+
+<!ATTLIST hair color CDATA #IMPLIED>
+<!ATTLIST hair length (none|short|average|long|lengthy) "average">
+
+<!ATTLIST eyes color CDATA #IMPLIED>
+<!ATTLIST eyes shape (narrow|average|wide) "average">
+<!ATTLIST eyes vergence (cross|average|wall) "average">
+<!ATTLIST eyes size (small|average|large) "average">
+<!ATTLIST eyes count CDATA "2">
+
+<!ATTLIST ears shape (rounded|pointed) "rounded">
+<!ATTLIST ears size (small|average|large) "average">
+<!ATTLIST ears count CDATA "2">
+
+<!ATTLIST mouth shape (narrow|average|wide) "average">
+<!ATTLIST mouth size (small|average|large) "average">
+<!ATTLIST mouth type (smile|neutral|frown) "neutral">
+
+<!ATTLIST nose size (none|small|average|large) "average">
+
+<!ATTLIST arm side (left|right) #REQUIRED>
+<!ATTLIST arm length (none|short|average|long) "average">
+
+<!ATTLIST leg side (left|right) #REQUIRED>
+<!ATTLIST leg length (none|short|average|long) "average">
+
+<!ATTLIST eye side (left|right|middle) #REQUIRED>
+<!ATTLIST eye color CDATA #IMPLIED>
+<!ATTLIST eye shape (narrow|average|wide) "average">
+<!ATTLIST eye vergence (cross|average|wall) "average">
+<!ATTLIST eye size (none|small|average|large) "average">
+
+<!ATTLIST ear side (left|right) #REQUIRED>
+<!ATTLIST ear shape (rounded|pointed) "rounded">
+<!ATTLIST ear size (none|small|average|large) "average">
+
+<!ATTLIST hand side (left|right) #REQUIRED>
+<!ATTLIST hand size (none|small|average|large) "average">
+
+<!ATTLIST foot side (left|right) #REQUIRED>
+<!ATTLIST foot size (none|small|average|large) "average">
+
+<!ATTLIST iris color CDATA #IMPLIED>
+<!ATTLIST iris size (none|small|average|large) "average">
+
+<!ATTLIST pupil color CDATA "black">
+<!ATTLIST pupul size (none|small|average|large) "average">
+<!ATTLIST pupil shape (slit|circle|camera) "circle">
+
+<!ATTLIST sclera color CDATA "white">
+
+<!ATTLIST fingers count CDATA "5">
+<!ATTLIST fingers length (none|short|average|long) "average">
+
+<!ATTLIST toes count CDATA "5">
+<!ATTLIST fingers length (none|short|average|long) "average">
+
+<!ATTLIST finger index CDATA #REQUIRED>
+<!ATTLIST finger length (none|short|average|long) "average">
+
+<!ATTLIST toe index CDATA #REQUIRED>
+<!ATTLIST toe length (none|short|average|long) "average">
+
+]>
