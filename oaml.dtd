@@ -15,7 +15,7 @@
 <!-- limitations under the License.                                           -->
 <!-- ------------------------------------------------------------------------ -->
 
-<!DOCUMENT oaml [
+<!DOCTYPE oaml [
 
 <!ELEMENT body (head,skin,arms,legs)>
 <!ELEMENT head (hair, eyes, ears, mouth, nose)>
