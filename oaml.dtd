@@ -109,7 +109,7 @@
 <!ATTLIST fingers length (none|short|average|long) "average">
 
 <!ATTLIST toes count CDATA "5">
-<!ATTLIST fingers length (none|short|average|long) "average">
+<!ATTLIST toes length (none|short|average|long) "average">
 
 <!ATTLIST finger index CDATA #REQUIRED>
 <!ATTLIST finger length (none|short|average|long) "average">
