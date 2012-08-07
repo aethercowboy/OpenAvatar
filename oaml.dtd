@@ -20,11 +20,11 @@
 <!ELEMENT body (head,skin,arms,legs)>
 <!ELEMENT head (hair, eyes, ears, mouth, nose)>
 <!ELEMENT skin (#PCDATA)>
-<!ELEMENT arms (arm+)>
-<!ELEMENT legs (leg+)>
+<!ELEMENT arms (arm*)>
+<!ELEMENT legs (leg*)>
 <!ELEMENT hair (#PCDATA)>
-<!ELEMENT eyes (eye+)>
-<!ELEMENT ears (ear+)>
+<!ELEMENT eyes (eye8)>
+<!ELEMENT ears (ear*)>
 <!ELEMENT mouth (#PCDATA)>
 <!ELEMENT nose (#PCDATA)>
 <!ELEMENT arm (hand)>
@@ -36,8 +36,8 @@
 <!ELEMENT iris (#PCDATA)>
 <!ELEMENT pupil (#PCDATA)>
 <!ELEMENT sclera (#PCDATA)>
-<!ELEMENT fingers (finger+)>
-<!ELEMENT toes (toe+)>
+<!ELEMENT fingers (finger*)>
+<!ELEMENT toes (toe*)>
 <!ELEMENT finger (#PCDATA)>
 <!ELEMENT toe (#PCDATA)>
 
@@ -50,13 +50,14 @@
 <!ATTLIST skin color CDATA #IMPLIED>
 <!ATTLIST skin tone (pale|light|average|tan|dark) "average">
 
-<!ATTLIST arms length (short|average|long) "average">
+<!ATTLIST arms length (none|short|average|long) "average">
 <!ATTLIST arms count CDATA "2">
 
-<!ATTLIST legs length (short|average|long) "average">
+<!ATTLIST legs length (none|short|average|long) "average">
+<!ATTLIST legs count CDATA "2">
 
 <!ATTLIST hair color CDATA #IMPLIED>
-<!ATTLIST hair length (none|short|average|long|lengthy) "average">
+<!ATTLIST hair length (none|short|average|long) "average">
 
 <!ATTLIST eyes color CDATA #IMPLIED>
 <!ATTLIST eyes shape (narrow|average|wide) "average">
