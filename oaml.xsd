@@ -1,0 +1,365 @@
+<?xml version="1.0"?>
+
+<!-- oaml.xsd -->
+
+<!-- ------------------------------------------------------------------------ -->
+<!-- (c) 2012 Jacob P. Silvia.                                                -->
+<!-- Licensed under the Apache License, Version 2.0 (the "License");          -->
+<!-- you may not use this file except in compliance with the License.         -->
+<!-- You may obtain a copy of the License at                                  -->
+<!--                                                                          -->
+<!-- http://www.apache.org/licenses/LICENSE-2.0                               -->
+<!--                                                                          -->
+<!-- Unless required by applicable law or agreed to in writing, software      -->
+<!-- distributed under this License is distributed on as "AS IS" BASIS,       -->
+<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. -->
+<!-- See the License for the specific language governing permissions and      -->
+<!-- limitations under the License.                                           -->
+<!-- ------------------------------------------------------------------------ -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://jacob.silvia.googlepages.com"
+           xmlns="http://jacob.silvia.googlepages.com"
+           elementFormDefault="qualified">
+
+  <!-- ELEMENTS -->
+  <xs:element name="arms"    type="armsType"    />
+  <xs:element name="arm"     type="armType"     />
+  <xs:element name="body"    type="bodyType"    />
+  <xs:element name="ears"    type="earsType"    />
+  <xs:element name="ear"     type="earType"     />
+  <xs:element name="eyes"    type="eyesType"    />
+  <xs:element name="eye"     type="eyeType"     />
+  <xs:element name="fingers" type="fingersType" />
+  <xs:element name="finger"  type="fingerType"  />
+  <xs:element name="foot"    type="footType"    />
+  <xs:element name="hair"    type="hairType"    />
+  <xs:element name="hand"    type="handType"    />
+  <xs:element name="head"    type="headType"    />
+  <xs:element name="iris"    type="irisType"    />
+  <xs:element name="legs"    type="legsType"    />
+  <xs:element name="leg"     type="legType"     />
+  <xs:element name="mouth"   type="mouthType"   />
+  <xs:element name="name"    type="xs:string"   />
+  <xs:element name="nose"    type="noseType"    />
+  <xs:element name="oaml"    type="oamlType"    />
+  <xs:element name="pupil"   type="pupilType"   />
+  <xs:element name="sclera"  type="scleraType"  />
+  <xs:element name="skin"    type="skinType"    />
+  <xs:element name="toes"    type="toesType"    />
+  <xs:element name="toe"     type="toeType"     />
+
+  <!-- ATTRIBUTES -->
+  <xs:attribute name="build"    type="buildType"             default="lean"    />
+  <xs:attribute name="color"    type="xs:string"                               />
+  <xs:attribute name="count"    type="xs:nonNegativeInteger"                   />
+  <xs:attribute name="gender"   type="genderType"            use="required"    />
+  <xs:attribute name="height"   type="heightType"            default="average" />
+  <xs:attribute name="index"    type="xs:nonNegativeInteger" use="required"    />
+  <xs:attribute name="length"   type="lengthType"            default="average" />
+  <xs:attribute name="shape"    type="shapeType"             default="average" />
+  <xs:attribute name="side"     type="sideType"              use="required"    />
+  <xs:attribute name="size"     type="sizeType"              default="average" />
+  <xs:attribute name="tone"     type="toneType"              default="average" />
+  <xs:attribute name="type"     type="typeType"              default="neutral" />
+  <xs:attribute name="vergence" type="vergenceType"          default="average" />
+  <xs:attribute name="weight"   type="weightType"            default="average" />
+
+  <!-- SIMPLE TYPES -->
+  <xs:simpleType name="bodyShapeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="v"         />
+      <xs:enumeration value="hourglass" />
+      <xs:enumeration value="apple"     />
+      <xs:enumeration value="pear"      />
+      <xs:enumeration value="straight"  />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="buildType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="lean"     />
+      <xs:enumeration value="fat"      />
+      <xs:enumeration value="muscular" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="earShapeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="rounded" />
+      <xs:enumeration value="pointed" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="genderType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="male"    />
+      <xs:enumeration value="female"  />
+      <xs:enumeration value="other"   />
+      <xs:enumeration value="unknown" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="heightType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="short"   />
+      <xs:enumeration value="average" />
+      <xs:enumeration value="tall"    />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="lengthType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none"    />
+      <xs:enumeration value="short"   />
+      <xs:enumeration value="average" />
+      <xs:enumeration value="long"    />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="pupilShapeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="slit"   />
+      <xs:enumeration value="circle" />
+      <xs:enumeration value="camera" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="shapeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="narrow"  />
+      <xs:enumeration value="average" />
+      <xs:enumeration value="wide"    />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="sideType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="left"   />
+      <xs:enumeration value="middle" />
+      <xs:enumeration value="right"  />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="sizeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none"    />
+      <xs:enumeration value="small"   />
+      <xs:enumeration value="average" />
+      <xs:enumeration value="large"   />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="toneType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="pale"    />
+      <xs:enumeration value="light"   />
+      <xs:enumeration value="average" />
+      <xs:enumeration value="tan"     />
+      <xs:enumeration value="dark"    />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="typeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="smile"   />
+      <xs:enumeration value="neutral" />
+      <xs:enumeration value="frown"   />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="vergenceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="cross"   />
+      <xs:enumeration value="average" />
+      <xs:enumeration value="wall"    />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="weightType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="light"   />
+      <xs:enumeration value="average" />
+      <xs:enumeration value="heavy"   />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- COMPLEX TYPES -->
+  <xs:complexType name="armsType">
+    <xs:attribute ref="length"            />
+    <xs:attribute ref="count" default="2" />
+    <xs:all>
+      <xs:element ref="arm" minOccurs="0" maxOccurs="unbounded" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="armType">
+    <xs:attribute ref="side"   />
+    <xs:attribute ref="length" />
+    <xs:all>
+      <xs:element ref="hand" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="bodyType">
+    <xs:attribute ref="gender" />
+    <xs:attribute ref="build"  />
+    <xs:attribute ref="height" />
+    <xs:attribute ref="weight" />
+    <xs:attribute name="shape" type="bodyShapeType" default="straight" />
+    <xs:all>
+      <xs:element ref="head" />
+      <xs:element ref="skin" />
+      <xs:element ref="arms" />
+      <xs:element ref="legs" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="earsType">
+    <xs:attribute ref="size"              />
+    <xs:attribute ref="count" default="2" />
+    <xs:attribute name="shape" type="earShapeType" default="rounded" />
+    <xs:all>
+      <xs:element ref="ear" minOccurs="0" maxOccurs="unbounded" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="earType">
+    <xs:attribute ref="side" />
+    <xs:attribute ref="size" />
+    <xs:attribute name="shape" type="earShapeType" default="rounded" />
+  </xs:complexType>
+
+  <xs:complexType name="eyesType">
+    <xs:attribute ref="color"             />
+    <xs:attribute ref="shape"             />
+    <xs:attribute ref="vergence"          />
+    <xs:attribute ref="size"              />
+    <xs:attribute ref="count" default="2" />
+    <xs:all>
+      <xs:element ref="eye" minOccurs="0" maxOccurs="unbounded" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="eyeType">
+    <xs:attribute ref="side"     />
+    <xs:attribute ref="color"    />
+    <xs:attribute ref="shape"    />
+    <xs:attribute ref="vergence" />
+    <xs:attribute ref="size"     />
+    <xs:all>
+      <xs:element ref="iris"   />
+      <xs:element ref="pupil"  />
+      <xs:element ref="sclera" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="fingersType">
+    <xs:attribute ref="count" default="5" />
+    <xs:attribute ref="length"            />
+    <xs:all>
+      <xs:element ref="finger" minOccurs="0" maxOccurs="unbounded" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="fingerType">
+    <xs:attribute ref="index"  />
+    <xs:attribute ref="length" />
+  </xs:complexType>
+
+  <xs:complexType name="footType">
+    <xs:attribute ref="side" />
+    <xs:attribute ref="size" />
+    <xs:all>
+      <xs:element ref="toes" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="hairType">
+    <xs:attribute ref="color" />
+    <xs:attribute name="length" type="hairLengthType" />
+  </xs:complexType>
+
+  <xs:complexType name="headType">
+    <xs:all>
+      <xs:element ref="hair"  />
+      <xs:element ref="eyes"  />
+      <xs:element ref="ears"  />
+      <xs:element ref="mouth" />
+      <xs:element ref="nose"  />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="handType">
+    <xs:attribute ref="side" />
+    <xs:attribute ref="size" />
+    <xs:all>
+      <xs:element ref="fingers" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="irisType">
+    <xs:attribute ref="color" />
+    <xs:attribute ref="size"  />
+  </xs:complexType>
+
+  <xs:complexType name="legsType">
+    <xs:attribute ref="length"            />
+    <xs:attribute ref="count" default="2" />
+    <xs:all>
+      <xs:element ref="leg" minOccurs="0" maxOccurs="unbounded" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="legType">
+    <xs:attribute ref="side"   />
+    <xs:attribute ref="length" />
+    <xs:all>
+      <xs:element ref="foot" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="mouthType">
+    <xs:attribute ref="shape" />
+    <xs:attribute ref="size"  />
+    <xs:attribute ref="type"  />
+  </xs:complexType>
+
+  <xs:complexType name="noseType">
+    <xs:attribute ref="size" />
+  </xs:complexType>
+
+  <xs:complexType name="oamlType">
+    <xs:all>
+      <xs:element ref="name" />
+      <xs:element ref="body" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="pupilType">
+    <xs:attribute ref="color" default="black" />
+    <xs:attribute ref="size"                  />
+    <xs:attribute name type="pupilShapeType" default="circle" />
+  </xs:complexType>
+
+  <xs:complexType name="scleraType">
+    <xs:attribute ref="color" default="white" />
+  </xs:complexType>
+
+  <xs:complexType name="skinType">
+    <xs:attribute ref="color" />
+    <xs:attribute ref="tone"  />
+  </xs:complexType>
+
+  <xs:complexType name="toesType">
+    <xs:attribute ref="count" default="5" />
+    <xs:attribute ref="length"            />
+    <xs:all>
+      <xs:element ref="toe" minOccurs="0" maxOccurs="unbounded" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="toeType">
+    <xs:attribute ref="index"  />
+    <xs:attribute ref="length" />
+  </xs:complexType>
