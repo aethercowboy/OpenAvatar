@@ -24,7 +24,7 @@
 <!ELEMENT arms (arm*)>
 <!ELEMENT legs (leg*)>
 <!ELEMENT hair (#PCDATA)>
-<!ELEMENT eyes (eye8)>
+<!ELEMENT eyes (eye*)>
 <!ELEMENT ears (ear*)>
 <!ELEMENT mouth (#PCDATA)>
 <!ELEMENT nose (#PCDATA)>
