@@ -67,23 +67,23 @@ HEAD, SKIN, ARMS, LEGS
 
 *gender* {REQUIRED} (male|female|other|unknown)
 
-  The character's gender. Can be used to specify certain physiological traits on the character.
+>  The character's gender. Can be used to specify certain physiological traits on the character.
 
 *build* (LEAN|fat|muscular)
 
-  The character's build. Can be used to make more muscular or more fat characters.
+>  The character's build. Can be used to make more muscular or more fat characters.
 
 *shape* (v|hourglass|apple|pear|STRAIGHT)
 
-  The character's body shape. Can be used to determine distribution of girth.
+>  The character's body shape. Can be used to determine distribution of girth.
 
 *height* (short|AVERAGE|tall)
 
-  The character's height. Can be used to make them taller or shorter.
+>  The character's height. Can be used to make them taller or shorter.
 
 *weight* (light|AVERAGE|heavy)
 
-  The character's weight. Can be used to make them skinnier or thicker.
+>  The character's weight. Can be used to make them skinnier or thicker.
   
 ### HEAD
 
@@ -109,11 +109,11 @@ none
 
 *color* (CDATA)
 
-  The color of the character's skin. Can use standard ways of specifying color in an XML document.
+>  The color of the character's skin. Can use standard ways of specifying color in an XML document.
   
 *tone* (pale|light|AVERAGE|tan|dark)
 
-  A modifier for skin tone. Can be used to adjust lightness or darkness atop specified color.
+>  A modifier for skin tone. Can be used to adjust lightness or darkness atop specified color.
 
 ### ARMS
 
@@ -127,11 +127,11 @@ ARM{*}
 
 *length* (none|short|AVERAGE|long)
 
-  The length of the arms.
+>  The length of the arms.
 
 *count* (CDATA)
 
-  The number of arms the character has. The default value is 2.
+>  The number of arms the character has. The default value is 2.
   
 ### LEGS
 
@@ -145,11 +145,11 @@ LEG{*}
 
 *length* (none|short|AVERAGE|long)
 
-  The length of the legs.
+>  The length of the legs.
 
 *count* (CDATA:2)
 
-  The number of legs the character has. The default value is 2.
+>  The number of legs the character has. The default value is 2.
 
 ### HAIR
 
@@ -163,11 +163,11 @@ none
 
 *color* (CDATA)
 
-  The preferred hair color.
+>  The preferred hair color.
 
 *length* (none|short|AVERAGE|long)
 
-  The preferred hair length. None is bald.
+>  The preferred hair length. None is bald.
 
 ### EYES
 
@@ -181,23 +181,23 @@ EYE{*}
 
 *color* (CDATA)
 
-  The preferred eye color (the iris).
+>  The preferred eye color (the iris).
 
 *shape* (narrow|AVERAGE|wide)
 
-  The preferred shape of the eye.
+>  The preferred shape of the eye.
 
 *vergence* (cross|AVERAGE|wall)
 
-  Which way the eyes are looking (straight ahead, at each other, or away from each other)
+>  Which way the eyes are looking (straight ahead, at each other, or away from each other)
 
 *size* (small|AVERAGE|large)
 
-  The size of the eyes.
+>  The size of the eyes.
 
 *count* (CDATA:2)
 
-  The number of eyes. Default 2.
+>  The number of eyes. Default 2.
 
 ### EARS
 
@@ -211,15 +211,15 @@ EAR{*}
 
 *shape* (ROUNDED|pointed)
 
-  The preferred shape of the ears: human or elvish.
+>  The preferred shape of the ears: human or elvish.
 
 *size* (small|AVERAGE|large)
 
-  The size of the ears.
+>  The size of the ears.
   
 *count* (CDATA:2)
 
-  How many ears? Default 2.
+>  How many ears? Default 2.
 
 ### MOUTH
 
@@ -233,15 +233,15 @@ none
 
 *shape* (narrow|AVERAGE|wide)
 
-  The shape of the character's mouth.
+>  The shape of the character's mouth.
 
 *size* (small|AVERAGE|large)
 
-  The size of the character's mouth.
+>  The size of the character's mouth.
 
 *type* (smile|NEUTRAL|frown)
 
-  Is the character smiling, frowning, or keeping straight-faced?
+>  Is the character smiling, frowning, or keeping straight-faced?
 
 ### NOSE
 
@@ -255,7 +255,7 @@ none
 
 *size* (none|small|AVERAGE|large)
 
-  The size of the character's nose.
+>  The size of the character's nose.
 
 ### ARM
 
@@ -269,11 +269,11 @@ HAND
 
 *side* {REQUIRED} (left|right)
 
-  Which side is the arm on?
+>  Which side is the arm on?
 
 *length* (none|short|AVERAGE|long)
 
-  The length of the arm.
+>  The length of the arm.
   
 ### LEG
 
@@ -287,11 +287,11 @@ FOOT
 
 *side* {REQUIRED} (left|right)
 
-  Which side is the leg on?
+>  Which side is the leg on?
 
 *length* (none|short|AVERAGE|long)
 
-  The length of the leg.
+>  The length of the leg.
 
 ### EYE
 
@@ -305,23 +305,23 @@ IRIS, PUPIL, SCLERA
 
 *side* {REQUIRED} (left|right|middle)
 
-  Which side is the eye on?
+>  Which side is the eye on?
 
 *color* (CDATA)
 
-  What color is the eye (iris)?
+>  What color is the eye (iris)?
 
 *shape* (narrow|AVERAGE|wide)
 
-  The shape of the eye.
+>  The shape of the eye.
 
 *vergence* (cross|AVERAGE|wall)
 
-  The way the eye is pointing.
+>  The way the eye is pointing.
 
 *size* (none|small|AVERAGE|large)
 
-  The size of the eye.
+>  The size of the eye.
 
 ### EAR
 
@@ -335,15 +335,15 @@ none
 
 *side* {REQUIRED} (left|right)
 
-  What side is the ear on?
+>  What side is the ear on?
 
 *shape* (RONDED|pointed)
 
-  Is the ear rounded or pointed?
+>  Is the ear rounded or pointed?
   
 *size* (none|small|AVERAGE|large)
 
-  The size of the ear.
+>  The size of the ear.
 
 ### HAND
 
@@ -357,11 +357,11 @@ FINGERS
 
 *side* {REQUIRED} (left|right)
 
-  What side is the hand on?
+>  What side is the hand on?
 
 *size* (none|small|AVERAGE|large)
 
-  The size of the hand.
+>  The size of the hand.
   
 ### FOOT
 
@@ -375,11 +375,11 @@ TOES
 
 *side* {REQUIRED} (left|right)
 
-  What side is the foot on?
+>  What side is the foot on?
 
 *size* (none|small|AVERAGE|large)
 
-  The size of the foot.
+>  The size of the foot.
 
 ### IRIS
 
@@ -393,11 +393,11 @@ none
 
 *color* (CDATA)
 
-  The preferred eye color.
+>  The preferred eye color.
 
 *size* (none|small|AVERAGE|large)
 
-  The size of the iris.
+>  The size of the iris.
 
 ### PUPIL
 
@@ -411,15 +411,15 @@ none
 
 *color* (CDATA:black)
 
-  The color of the pupil. Default black.
+>  The color of the pupil. Default black.
 
 *size* (none|small|AVERAGE|large)
 
-  The size of the pupil.
+>  The size of the pupil.
   
 *shape* (slit|CIRCLE|camera)
 
-  The shape of the pupil. Slit are like cat pupils. Camera are like octopus pupils.
+>  The shape of the pupil. Slit are like cat pupils. Camera are like octopus pupils.
 
 ### SCLERA
 
@@ -433,7 +433,7 @@ none
 
 *color* (CDATA:white)
 
-  The color of teh sclera. Default white.
+>  The color of the sclera. Default white.
 
 ### FINGERS
 
@@ -447,11 +447,11 @@ FINGER{*}
 
 *count* (CDATA:5)
 
-  How many fingers? Default 5.
+>  How many fingers? Default 5.
 
 *length* (none|short|AVERAGE|long)
 
-  The length of the fingers.
+>  The length of the fingers.
 
 ### TOES (toe*)>
 
@@ -465,11 +465,11 @@ TOE{*}
 
 *count* (CDATA:5)
 
-  How many toes? Default 5.
+>  How many toes? Default 5.
 
 *length* (none|short|AVERAGE|long)
 
-  The length of the toes.
+>  The length of the toes.
 
 ### FINGER
 
@@ -483,11 +483,11 @@ none
 
 *index* {REQUIRED} (CDATA)
 
-  The index of the finger (zero-indexed).
+>  The index of the finger (zero-indexed).
 
 *length* (none|short|AVERAGE|long)
 
-  The length of the finger.
+>  The length of the finger.
 
 ### TOE
 
@@ -501,8 +501,8 @@ none
 
 *index* {REQUIRED} (CDATA)
 
-  The index of the toe (zero-indexed).
+>  The index of the toe (zero-indexed).
   
 *length* (none|short|AVERAGE|long)
 
-  The length of the toe/
+>  The length of the toe.
