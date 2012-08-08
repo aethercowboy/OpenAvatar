@@ -17,6 +17,7 @@
 
 <!DOCTYPE oaml [
 
+<!ELEMENT name (#PCDATA)>
 <!ELEMENT body (head,skin,arms,legs)>
 <!ELEMENT head (hair, eyes, ears, mouth, nose)>
 <!ELEMENT skin (#PCDATA)>
