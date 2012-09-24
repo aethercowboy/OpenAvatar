@@ -339,7 +339,7 @@
   <xs:complexType name="pupilType">
     <xs:attribute ref="color" default="black" />
     <xs:attribute ref="size"                  />
-    <xs:attribute name type="pupilShapeType" default="circle" />
+    <xs:attribute name="shape" type="pupilShapeType" default="circle" />
   </xs:complexType>
 
   <xs:complexType name="scleraType">
