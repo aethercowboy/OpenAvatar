@@ -1,7 +1,7 @@
 OpenAvatar
 ==========
 
-An XML specification to describe your virtual personae.
+An XML specification to describe your virtual personae. This is not associated with VastPark's project of the same name (http://vastpark.org/projects/1/wiki/OpenAvatar), but they're welcome to incorporate it if they like. :)
 
 Definition
 ----------
